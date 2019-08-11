@@ -1,4 +1,4 @@
-﻿using ABCAssignment.Common;
+﻿using BunningAssignment.Common;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
@@ -21,14 +21,33 @@ namespace BunningsAssign.Pages
         [FindsBy(How = How.XPath, Using = "/html//div[@id='headerMainMenu']/div[@class='header-search']//input[@type='text']")]
         public IWebElement Searchboxtxt { get; set; }
 
+        [FindsBy(How = How.CssSelector, Using = ".search-container_btn-submit [focusable]")]
+        public IWebElement SearBtn { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//div[@class='codified-product-tile__product-image__image--product']")]
+        public IWebElement SelectpaintElement { get; set; }
+
+
+        
 
         public void Search(string Searchtext)
 
         {
-            Wrapper.FillTextBoxandEnter(Searchboxtxt, Searchtext);
+            Wrapper.FilltextBox(Searchboxtxt, Searchtext);
         }
 
+        public void ClickSearch()
 
+        {
+            Wrapper.ClickElement(SearBtn);
+        }
+
+        public void SelectPaint()
+
+        {
+            Wrapper.ClickElement(SelectpaintElement);
+        }
+      
 
     }
 

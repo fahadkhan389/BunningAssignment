@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ABCAssignment.Features
+namespace BunningAssignment.Features
 {
     using TechTalk.SpecFlow;
     
@@ -72,18 +72,16 @@ namespace ABCAssignment.Features
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-        testRunner.Given("i have opened a Chrome browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("I am on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-     testRunner.Given("I am on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.And("I Click on Search Button from search Result page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-  testRunner.And("i enter text \"Paint\" to search and enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
   testRunner.And("I select any random paint from search Result page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+  testRunner.And("I click Add to Wishlist button from product detail page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-  testRunner.And("I click Add to Cart button from product detail page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
   testRunner.When("i go to wishlistpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
+#line 13
   testRunner.Then("paint should be added in wish list page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,4 +1,4 @@
-﻿using ABCAssignment.Common;
+﻿using BunningAssignment.Common;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
@@ -18,18 +18,14 @@ namespace BunningsAssign.Pages
 
         }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@id='header']/div[1]/a")]
-        public IWebElement NewsBannerLinkXpath { get; set; }
+        [FindsBy(How = How.XPath, Using = "//button[@data-action='add-to-wish-list']")]
+        public IWebElement AddwishlistBtn { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@id='n-justin']/a")]
-        public IWebElement JustinLinkXpath { get; set; }
+        public void ClickAddWishList()
 
-        [FindsBy(How = How.Id, Using = "jwplayer-video-0_display_button_play")]
-        public IWebElement PlayVideoBtnId { get; set; }
-
-        [FindsBy(How = How.XPath, Using = "//img[@src='http://www.abc.net.au/news/image/8255972-16x9-940x529.jpg']")]
-        public IWebElement ImageXpath { get; set; }
-
+        {
+            Wrapper.ClickElement(AddwishlistBtn);
+        }
 
 
 

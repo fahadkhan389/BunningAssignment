@@ -1,4 +1,6 @@
-﻿using BunningsAssign.Pages;
+﻿using BunningAssignment.Common;
+using BunningsAssign.Pages;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,42 +12,40 @@ namespace BunningsAssign.Steps
     [Binding]
     public sealed class AddingWishListProductSteps
     {
-
-        [Given(@"i enter text ""(.*)"" to search and enter")]
-        public void GivenIEnterTextToSearch(string searchtxt)
-        {
-            SearchPage mypage = new SearchPage();
-            mypage.Search(searchtxt);
-             }
-
-
         [Given(@"I Click on Search Button from search Result page")]
         public void GivenIClickOnSearchButtonFromSearchResultPage()
         {
-          }
+            SearchPage mypage = new SearchPage();
+            mypage.ClickSearch();
+
+
+        }
 
         [Given(@"I select any random paint from search Result page")]
         public void GivenISelectAnyRandomPaintFromSearchResultPage()
         {
-
+            SearchPage mypage = new SearchPage();
+            mypage.SelectPaint();
         }
 
-        [Given(@"I click Add to Cart button from product detail page")]
+        [Given(@"I click Add to Wishlist button from product detail page")]
         public void GivenIClickAddToCartButtonFromProductDetailPage()
         {
-
+            ProductDetailPage mypage = new ProductDetailPage();
+            mypage.ClickAddWishList();
+        
         }
 
-        [When(@"i go to wishlistpage")]
-        public void WhenIGoToWishlistpage()
-        {
-
-        }
+        
 
         [Then(@"paint should be added in wish list page")]
         public void ThenPaintShouldBeAddedInWishListPage()
         {
-         }
+            
+            WishListPage mypage = new WishListPage();
+            mypage.VerifyWIshListItem();
+
+        }
 
     }
 }

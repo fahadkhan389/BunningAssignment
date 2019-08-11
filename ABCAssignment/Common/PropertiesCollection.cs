@@ -1,14 +1,7 @@
 ﻿using OpenQA.Selenium;
 
-namespace ABCAssignment.Common
+namespace BunningAssignment.Common
 {
-    public enum IdentityType
-    {
-        Id,
-        Xpath,
-        Name
-    }
-
     public class PropertiesCollection
     {
         public static IWebDriver driver { get; set; }
